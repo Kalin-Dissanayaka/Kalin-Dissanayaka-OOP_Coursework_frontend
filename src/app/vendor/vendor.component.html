@@ -19,16 +19,16 @@
     </div>
 
     <div class="mb-3">
-      <label for="ticketReleaseRate" class="form-label">Ticket Release Rate:</label>
+      <label for="releaseRate" class="form-label">Ticket Release Rate:</label>
       <input
         type="number"
         class="form-control"
-        id="ticketReleaseRate"
+        id="releaseRate"
         placeholder="Enter Ticket Release Rate"
-        formControlName="ticketReleaseRate"
+        formControlName="releaseRate"
       />
       <div
-        *ngIf="vendorForm.get('ticketReleaseRate')?.touched && vendorForm.get('ticketReleaseRate')?.invalid"
+        *ngIf="vendorForm.get('releaseRate')?.touched && vendorForm.get('releaseRate')?.invalid"
         class="text-danger"
       >
         Ticket Release Rate is required and must be at least 1.
@@ -36,16 +36,16 @@
     </div>
 
     <div class="mb-3">
-      <label for="customerRetrievalRate" class="form-label">Customer Retrieval Rate:</label>
+      <label for="retrievalRate" class="form-label">Customer Retrieval Rate:</label>
       <input
         type="number"
         class="form-control"
-        id="customerRetrievalRate"
+        id="retrievalRate"
         placeholder="Enter Customer Retrieval Rate"
-        formControlName="customerRetrievalRate"
+        formControlName="retrievalRate"
       />
       <div
-        *ngIf="vendorForm.get('customerRetrievalRate')?.touched && vendorForm.get('customerRetrievalRate')?.invalid"
+        *ngIf="vendorForm.get('retrievalRate')?.touched && vendorForm.get('retrievalRate')?.invalid"
         class="text-danger"
       >
         Customer Retrieval Rate is required and must be at least 1.
@@ -53,16 +53,16 @@
     </div>
 
     <div class="mb-3">
-      <label for="maxTicketCapacity" class="form-label">Maximum Ticket Capacity:</label>
+      <label for="maxCapacity" class="form-label">Maximum Ticket Capacity:</label>
       <input
         type="number"
         class="form-control"
-        id="maxTicketCapacity"
+        id="maxCapacity"
         placeholder="Enter Maximum Ticket Capacity"
-        formControlName="maxTicketCapacity"
+        formControlName="maxCapacity"
       />
       <div
-        *ngIf="vendorForm.get('maxTicketCapacity')?.touched && vendorForm.get('maxTicketCapacity')?.invalid"
+        *ngIf="vendorForm.get('maxCapacity')?.touched && vendorForm.get('maxCapacity')?.invalid"
         class="text-danger"
       >
         Maximum Ticket Capacity is required and must be at least 1.

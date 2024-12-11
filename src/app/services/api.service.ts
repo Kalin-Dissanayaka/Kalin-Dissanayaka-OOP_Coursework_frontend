@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface CustomerRequest {
@@ -12,20 +12,15 @@ export interface CustomerRequest {
   providedIn: 'root'
 })
 export class ApiService {
-  saveConfiguration: any;
-  createVendor(value: any): Observable<any> {
-    throw new Error('Method not implemented.');
+  private apiUrl = "http://localhost:8080/api/v1";
+
+  constructor(private http: HttpClient) { }
+
+  saveConfig(data: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl + "/config/post", data);
   }
-  private apiUrl = 'http://localhost:8080/api';
 
-  constructor(private http: HttpClient) {}
-
-  addCustomer(data: CustomerRequest): Observable<any> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json');
-    
-    return this.http.post(`${this.apiUrl}/customers/addcustomer`, data, {
-      headers: headers
-    });
+  getTickets(): Observable<any> {
+    return this.http.get<any>(this.apiUrl + "/config/get");
   }
 }

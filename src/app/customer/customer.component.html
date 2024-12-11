@@ -7,36 +7,34 @@
         <th>Ticket Price</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let ticket of tickets">
       <tr>
-        <td>{{ ticketId }}</td>
-        <td>{{ eventName }}</td>
-        <td>{{ ticketPrice }}</td>
+        <td>{{ ticket.ticketId }}</td>
+        <td>{{ ticket.eventName }}</td>
+        <td>{{ ticket.ticketPrice }}</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="ticket-status">
+    <div class="ticket-status">
     <div class="status-box">
       <span>Available Tickets:</span>
-      <p>{{ availableTickets }}</p>
+      <p>{{ ticketsData.available }}</p>
     </div>
     <div class="status-box">
       <span>Sold Tickets:</span>
-      <p>{{ soldTickets }}</p>
+      <p>{{ ticketsData.sold }}</p>
     </div>
     <div class="status-box">
       <span>Due Tickets:</span>
-      <p>{{ dueTickets }}</p>
-    </div>
+      <p>{{ ticketsData.due }}</p>
+    </div>  
 
 
     <div class="button-group">
-      <button class="btn btn-start" (click)="startSimulation()">Start</button>
-      <button class="btn btn-stop" (click)="startSimulation()">Stop</button>
-    </div>
-
-  </div>
+      <button class="btn btn-start" (click)="fetchTickets()">Start</button>
+  <!--     <button class="btn btn-stop" (click)="">Stop</button> -->
+    </div> 
 </div>
 
 

@@ -7,12 +7,12 @@ import { CustomerFormComponent } from './customer/customer.component';
 
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent},
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  {path: 'vendor', component: VendorFormComponent},
- { path: 'vendor-form', component: VendorFormComponent },
-{ path: 'customer-form', component: CustomerFormComponent },
-  {path: 'customer', component: CustomerFormComponent}
+  { path: 'vendor', component: VendorFormComponent },
+  { path: 'vendor-form', component: VendorFormComponent },
+  { path: 'customer-form', component: CustomerFormComponent },
+  { path: 'customer', component: CustomerFormComponent }
   // Add other routes here
 ];
 
