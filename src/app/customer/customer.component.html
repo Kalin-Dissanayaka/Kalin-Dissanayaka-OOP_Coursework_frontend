@@ -1,0 +1,42 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Ticket ID</th>
+        <th>Event Name</th>
+        <th>Ticket Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ ticketId }}</td>
+        <td>{{ eventName }}</td>
+        <td>{{ ticketPrice }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ticket-status">
+    <div class="status-box">
+      <span>Available Tickets:</span>
+      <p>{{ availableTickets }}</p>
+    </div>
+    <div class="status-box">
+      <span>Sold Tickets:</span>
+      <p>{{ soldTickets }}</p>
+    </div>
+    <div class="status-box">
+      <span>Due Tickets:</span>
+      <p>{{ dueTickets }}</p>
+    </div>
+
+
+    <div class="button-group">
+      <button class="btn btn-start" (click)="startSimulation()">Start</button>
+      <button class="btn btn-stop" (click)="startSimulation()">Stop</button>
+    </div>
+
+  </div>
+</div>
+
+

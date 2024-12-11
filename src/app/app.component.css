@@ -1,0 +1,106 @@
+/* General Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #394b5f, #4191e1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #730a0a !important;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1);
+    color: #ffe600 !important;
+  }
+  
+  /* Navigation Links */
+  .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e3f2fd !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Active Link */
+  .nav-link.active {
+    color: #ffe600 !important;
+    border-bottom: 2px solid #ffe600;
+  }
+  
+  /* Search Bar Styling */
+  .form-control {
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-info {
+    background-color: #ffe600 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .btn-info:hover {
+    background-color: #ffc107 !important;
+    transform: scale(1.1);
+  }
+  
+ 
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #980d0d;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-toggler-icon:hover {
+    background-color: #00ff95;
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-menu {
+    background-color: #0073e6;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .dropdown-item {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #1e90ff;
+    color: #ffe600 !important;
+  }
+  

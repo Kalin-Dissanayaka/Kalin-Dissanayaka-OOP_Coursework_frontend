@@ -1,0 +1,117 @@
+<div class="container mt-5">
+  <h3 class="text-center">Vendor Configuration Form For Simulation</h3>
+  <form [formGroup]="vendorForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="totalTickets" class="form-label">Total Tickets:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="totalTickets"
+        placeholder="Enter Total Tickets"
+        formControlName="totalTickets"
+      />
+      <div
+        *ngIf="vendorForm.get('totalTickets')?.touched && vendorForm.get('totalTickets')?.invalid"
+        class="text-danger"
+      >
+        Total Tickets are required and must be a positive number.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="ticketReleaseRate" class="form-label">Ticket Release Rate:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="ticketReleaseRate"
+        placeholder="Enter Ticket Release Rate"
+        formControlName="ticketReleaseRate"
+      />
+      <div
+        *ngIf="vendorForm.get('ticketReleaseRate')?.touched && vendorForm.get('ticketReleaseRate')?.invalid"
+        class="text-danger"
+      >
+        Ticket Release Rate is required and must be at least 1.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="customerRetrievalRate" class="form-label">Customer Retrieval Rate:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="customerRetrievalRate"
+        placeholder="Enter Customer Retrieval Rate"
+        formControlName="customerRetrievalRate"
+      />
+      <div
+        *ngIf="vendorForm.get('customerRetrievalRate')?.touched && vendorForm.get('customerRetrievalRate')?.invalid"
+        class="text-danger"
+      >
+        Customer Retrieval Rate is required and must be at least 1.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="maxTicketCapacity" class="form-label">Maximum Ticket Capacity:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="maxTicketCapacity"
+        placeholder="Enter Maximum Ticket Capacity"
+        formControlName="maxTicketCapacity"
+      />
+      <div
+        *ngIf="vendorForm.get('maxTicketCapacity')?.touched && vendorForm.get('maxTicketCapacity')?.invalid"
+        class="text-danger"
+      >
+        Maximum Ticket Capacity is required and must be at least 1.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="numVendors" class="form-label">Number Of Vendors:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="numVendors"
+        placeholder="Enter Number Of Vendors"
+        formControlName="numVendors"
+      />
+      <div
+        *ngIf="vendorForm.get('numVendors')?.touched && vendorForm.get('numVendors')?.invalid"
+        class="text-danger"
+      >
+        Number of Vendors is required and must be at least 1.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="numCustomers" class="form-label">Number Of Customers:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="numCustomers"
+        placeholder="Enter Number Of Customers"
+        formControlName="numCustomers"
+      />
+      <div
+        *ngIf="vendorForm.get('numCustomers')?.touched && vendorForm.get('numCustomers')?.invalid"
+        class="text-danger"
+      >
+        Number of Customers is required and must be at least 1.
+      </div>
+    </div >
+
+    <div class="button-container">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="vendorForm.invalid"
+        (click)="onSubmit()"
+      >
+        Start Configuration
+      </button>
+    </div>
+  </form>
+</div>
